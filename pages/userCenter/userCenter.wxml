@@ -1,0 +1,15 @@
+<!--pages/userCenter/userCenter.wxml-->
+<view class='container'>
+        <view class="userinfo" bindtap="getUserInfo">
+          <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : '../../images/icons/user-unlogin.png'}}" background-size="cover" />
+            <view>
+              <text class="userinfo-nickname">{{logged ? userInfo.nickName : ''}}</text>
+              <view class="userinfo-tip">查看个人主页或编辑简介</view>
+          </view>
+        </view>
+
+
+
+
+
+</view>

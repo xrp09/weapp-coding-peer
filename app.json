@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/upload",
+    "pages/upload/upload",
+    "pages/userCenter/userCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "码上同行",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#999",
+    "selectedColor": "#1E8AE8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/icons/home-light.png",
+        "iconPath": "images/icons/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icons/market-light.png",
+        "iconPath": "images/icons/market.png",
+        "pagePath": "pages/logs/logs",
+        "text": "投稿"
+      },
+      {
+        "selectedIconPath": "images/icons/msg-light.png",
+        "iconPath": "images/icons/msg.png",
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的"
+      }
+    ]
+  }
+}
