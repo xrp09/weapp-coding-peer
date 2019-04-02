@@ -19,3 +19,85 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.tab-wrapper{
+  max-width: 750rpx;
+  background: #F6F6F6;
+  border-top: 1rpx solid #F6F6F6;
+  border-bottom: 1rpx solid #F6F6F6;
+  position: fixed;
+  top: 0rpx;
+}
+
+.tab-item{
+  display: inline-block;
+  width: 375rpx;
+  font-size: 34rpx;
+  text-align: center;
+  background: #fff;
+  color: #999;
+  padding: 12rpx 0;
+}
+
+.tab-item-active{
+  color: #323233;
+}
+
+.tab-item-line{
+  width: 375rpx;
+  position: absolute;
+  left: 350rpx;
+  bottom: 1rpx;
+  border-bottom: 4rpx solid #10C563;
+}
+.tab-content{
+  max-width: 750rpx;
+  background: #F6F6F6;
+  font-size: 34rpx;
+  margin-top: 78rpx;
+}
+
+.tab-content-recommend{
+  max-width: 750rpx;
+  height: 250rpx;
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.category-avatar{
+  width:100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.recommend-title{
+  font-size: 34rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10rpx 10rpx;
+
+}
+
+.category{
+  font-size: 28rpx;
+  margin: 34rpx 0;
+  color: #999;
+  vertical-align:middle;
+  float:right;
+
+}
+
+.recommend-content{
+  max-width: 700rpx; 
+  display: -webkit-box; 
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  color: #666;
+  line-height: 1.6;
+}

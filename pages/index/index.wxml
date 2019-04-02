@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!--<view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -9,5 +9,54 @@
   </view>
   <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view> -->
+  </view> 
+</view> -->
+
+
+<view>
+      <!-- tab begin-->
+      <view class="tab-wrapper" bindtap="setActive">
+        <view class="tab-item {{isActive == 0 ? 'tab-item-active' : ''}}" data-index="0">首页</view>
+        <view class="tab-item {{isActive == 1 ? 'tab-item-active' : ''}}" data-index="1">使用说明</view>
+        <view class="tab-item-line" animation="{{animationData}}"></view>
+    </view>
+    <!-- tab end -->
+<view class="tab-content {{isActive == 0 ? 'show' : 'hide'}}">
+        <view class="tab-content-recommend" wx:for="{{resourceList}}" wx:key="{{index}}" wx:item="item">
+            <view class="content-category">
+                <image class="category-avatar" src="{{item.avatar}}"/>
+                <view class="recommend-title" data-id="{{item.id}}" data-title="{{item.title}}" bindtap="goTitleDetail">{{item.title}}</view>
+                 <!-- <text class="category" style='color:{{color}}'>{{item.category=='YC'?'原创':'转载'}}</text> -->
+                 <!-- <view wx:if="{{item.category=='YC'}}">
+                        <text class="category" style='color:green'>{{item.category=='YC'?'原创':'转载'}}</text> 
+                </view>
+                              <view wx:elif="{{item.category=='ZZ'}}">
+                        <text class="category" style='color:red'>{{item.category=='YC'?'原创':'转载'}}</text> 
+                </view> -->
+                  <text wx:if="{{item.category=='YC'}}" class="category" style='color:green'>{{item.category=='YC'?'原创':'转载'}}</text> 
+                  <text wx:elif="{{item.category=='ZZ'}}" class="category" style='color:red'>{{item.category=='YC'?'原创':'转载'}}</text> 
+              </view>
+            
+            <view class="recommend-content"
+                data-id="{{item.id}}"
+                data-title="{{item.title}}"
+                data-avatar="{{item.avatar}}"
+                data-content="{{item.fineAnswer.description}}"
+                data-like="{{item.fineAnswer.like}}"
+                data-comment="{{item.fineAnswer.comment}}"
+                bindtap="goContentDetail">{{item.fineAnswer.description}}</view>
+            <!-- <view class="recommend-footer">
+                <view class="recommend-footer-text">
+                    <text>{{item.fineAnswer.like}}{{item.from == 'live' ? '感兴趣' : '赞同'}} · {{item.fineAnswer.comment}}{{item.from == 'live' ? '人参与' : '评论'}}</text>
+                    <text wx:if="{{item.from}}">· {{footerTip[item.from]}}</text>
+                </view>
+            </view> -->
+        </view>
+ </view>
+
+
+
+
+
 </view>
+  

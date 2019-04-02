@@ -1,13 +1,19 @@
 <!--pages/userCenter/userCenter.wxml-->
-<view class='container'>
+<view wx:if="{{logged}}" class='container'>
         <view class="userinfo" bindtap="getUserInfo">
           <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : '../../images/icons/user-unlogin.png'}}" background-size="cover" />
             <view>
               <text class="userinfo-nickname">{{logged ? userInfo.nickName : ''}}</text>
-              <view class="userinfo-tip">查看个人主页或编辑简介</view>
+              <!-- <view class="userinfo-tip">查看个人主页或编辑简介</view> -->
           </view>
         </view>
 
+<view wx:if="{{!logged}}" class="userinfo-no" >
+          <image class="userinfo-avatar-no" src="{{ '../../images/icons/user-unlogin.png'}}" background-size="cover" />
+<button class="detail-but btn-primary full-width" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+微信登录
+</button>
+</view>
 
 
 

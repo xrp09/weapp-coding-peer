@@ -3,8 +3,8 @@ App({
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    logs.unshift(Date.now())//向数组的开头添加当前的日期，并返回新的长度
+    wx.setStorageSync('logs', logs) //同步缓存,同步缓存直到同步方法处理完才能继续往下执行,数据较安全；异步则不会阻塞当前的任务,性能更好。
 
     // 登录
     wx.login({

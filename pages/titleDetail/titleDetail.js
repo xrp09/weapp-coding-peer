@@ -1,5 +1,4 @@
-// pages/upload/upload.js
-
+// pages/titleDetail/titleDetail.js
 var util = require("../../utils/util.js")
 var resdata = require("../../utils/data.js")
 Page({
@@ -8,17 +7,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shuoming:"",
-    items: [
-      { name: 'YC', value: '原创', checked: 'true' },
-      { name: 'ZZ', value: '转载' },
-    ]
-
+    detailTitle: "我是一个标题",
+    author:"老马",
+    downloadCount:"12",
+    content:"   它的另一个名字就是牛逼。它的另一个名字就是牛逼它的另一个名字就是牛逼它的另一个名字就是牛逼它的另一个名字就是牛逼它的另一个名字就是牛逼它的另一个名字就是牛逼"
   },
 
-  postResource:function(){
+  receiveResource:function(){
+    util.showSuccess("内容已复制");
+    // 弹出框
+    // this.popup.showPopup();
 
-    this.popup.showPopup();
   },
   showPopup() {
     this.popup.showPopup();
@@ -33,34 +32,17 @@ Page({
   _success() {
     console.log('你点击了确定');
     this.popup.hidePopup();
-    util.showMessage("上传成功");
   },
 
-  // formsubmit: function (e) {
-  //   var that = this;
-  //   var formData = e.detail.value;
-  //   wx.request({
-  //     url: util.apiUrl + 'Index/formsubmit?program_id=' + app.jtappid,
-  //     data: formData,
-  //     header: { 'Content-Type': 'application/json' },
-  //     success: function (res) {
-  //       if (res.data.statu == 1) {
-  //         wx.showToast({
-  //           title: '提交成功',
-  //         })
-  //         that.setData({
-  //           form_info: ''
-  //         })
-  //       }
-  //     }
-  //   })
-  // },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var id = options.id;
+    var title = options.title;
+    console.log(id+title);
     this.setData({
-      shuoming: resdata.shuoming.content
+      detailTitle:title
     })
   },
 

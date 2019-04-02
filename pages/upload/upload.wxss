@@ -1,1 +1,45 @@
 /* pages/upload/upload.wxss */
+.contaitont{
+  background-color: #fff;
+  color: #000;
+}
+.shuoming{
+font-size: 30rpx;
+margin: 40rpx 10rpx;
+color: red;
+}
+.upload-content{
+  padding:30rpx 10rpx;
+line-height:50rpx;
+font-size: 32rpx;
+}
+.detail-but{
+line-height:88rpx;
+height:88rpx;
+padding:0 20rpx;
+display:inline-block;
+vertical-align:middle;
+text-align:center;
+border-radius:8rpx;
+cursor:pointer;
+font-size:32rpx;
+
+
+}
+
+.btn-primary{
+background-color:#00b358;
+color:#fff;
+border:0 none;
+}
+
+.full-width{
+width:100%;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+input{
+  height:1.8rem;
+
+}

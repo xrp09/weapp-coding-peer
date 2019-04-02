@@ -1,0 +1,24 @@
+<!--pages/titleDetail/titleDetail.wxml-->
+<view class='resource-detail'>
+  <view class='detail-top'>
+      <view class='detail-title'>{{detailTitle}}</view>
+      <text class='author-name'>作者：{{author}}</text>
+      <text class='download-rec'>下载数：{{downloadCount}}</text>
+  </view>
+<!-- detail -->
+  <view class='detail-bottom'>
+  <view class='backcomm'>
+    <text class='detail-content' selectable='true'>{{content}}</text>
+  </view>
+
+  <button class='detail-but btn-primary full-width' bindtap='receiveResource'>复制下载地址</button>
+  </view>
+   <popup id='popup' 
+      title='领取成功' 
+      content='百度云链接已复制' 
+      btn_no='取消'
+      btn_ok='确定'
+      bind:error="_error"  
+      bind:success="_success">
+  </popup>
+</view>

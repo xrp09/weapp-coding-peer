@@ -1,2 +1,36 @@
 <!--pages/upload/upload.wxml-->
-<text>pages/upload/upload.wxml</text>
+<view class='contaitont'>
+<view class='shuoming'>{{shuoming}}</view>
+
+<view class='upload-content'>
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    {{item.value}}
+  </label>
+</radio-group>
+
+  <!-- <form bindsubmit='formsubmit'> -->
+<view>
+<label>
+标题：<input name="title" placeholder="请输入标题"  />
+作者：<input name="author" placeholder="请输入作者"  />
+价格：<input  name="price" placeholder="请输入价格"  />
+简介：<input name="destrion" placeholder="请输入简介"  />
+下载地址：<input name="downloadaddress" placeholder="请输入下载地址" />
+<button class='detail-but btn-primary full-width' bindtap='postResource'>提交</button>
+</label>
+</view>
+
+
+</view>
+<popup id='popup' 
+      title='确认' 
+      content='确认提交资源吗？' 
+      btn_no='取消'
+      btn_ok='确定'
+      bind:error="_error"  
+      bind:success="_success">
+  </popup>
+</view>

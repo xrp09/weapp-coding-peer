@@ -2,20 +2,23 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/upload",
     "pages/upload/upload",
-    "pages/userCenter/userCenter"
+    "pages/userCenter/userCenter",
+    "pages/titleDetail/titleDetail"
+    
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#10C563",
     "navigationBarTitleText": "码上同行",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#F6F8F9"
   },
   "tabBar": {
-    "backgroundColor": "#fff",
+    "backgroundColor": "#10C563",
     "color": "#999",
-    "selectedColor": "#1E8AE8",
+    "selectedColor": "#fff",
     "borderStyle": "white",
     "list": [
       {
@@ -27,7 +30,7 @@
       {
         "selectedIconPath": "images/icons/market-light.png",
         "iconPath": "images/icons/market.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/upload/upload",
         "text": "投稿"
       },
       {

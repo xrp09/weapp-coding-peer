@@ -1,0 +1,80 @@
+/* pages/titleDetail/titleDetail.wxss */
+page {
+  background:#EEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  color: #000;
+  height: 100%;
+  font-size:32rpx;
+}
+.detail-top{
+  background:#FFF;
+  height: 24%;
+  width: 100%;
+ border-top: 1rpx solid #F6F6F6;
+  border-bottom: 1rpx solid #F6F6F6;
+  position: fixed;
+  top: 0rpx;
+  padding:50rpx;
+
+}
+
+.detail-title{
+margin-bottom: 100rpx;
+font-size:50rpx;
+
+
+}
+
+.author-name{
+margin-right: 50rpx;
+
+
+}
+
+.detail-bottom{
+  background:#FFF;
+  height: 74%;
+  width: 100%;
+  border-top: 1rpx solid #F6F6F6;
+  border-bottom: 1rpx solid #F6F6F6;
+  position: fixed;
+  bottom: 0;
+}
+.backcomm{
+  margin-top: 40rpx;
+  padding:20rpx;
+
+}
+.detail-content{
+
+
+}
+
+.detail-but{
+line-height:88rpx;
+height:88rpx;
+padding:0 20rpx;
+display:inline-block;
+vertical-align:middle;
+text-align:center;
+border-radius:8rpx;
+cursor:pointer;
+font-size:32rpx;
+margin:70% 0;
+
+}
+
+.btn-primary{
+background-color:#00b358;
+color:#fff;
+border:0 none;
+}
+
+.full-width{
+width:100%;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
