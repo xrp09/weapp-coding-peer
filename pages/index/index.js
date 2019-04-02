@@ -55,14 +55,41 @@ Page({
       hasUserInfo: true
     })
   },
-  getResourceList:function(){
-    this.setData({
-      resourceList: resdata.resource1().list
+  // getResourceList:function(){
+  //   this.setData({
+  //     resourceList: resdata.resource1().list
 
+  //   })
+
+  //   console.log(resdata.resource1().list);
+  // },
+  //获取首页信息
+  getResourceList(flag) {
+    var that = this;
+    util.http('resourceListApi', {}, (res) => {
+      if (res.errMsg) {
+        util.showModel(res.errMsg);
+      } else {
+        if (!flag) {
+          console.log('setData')
+          that.setData({
+            resourceList: res.data.list
+          })
+        console.log('请求首页列表数据');
+        }
+        if (flag) {
+          that.setData({
+            resourceList: res.list.concat(that.data.recList)
+          })
+          console.log('刷新首页列表数据');
+          wx.stopPullDownRefresh();
+          wx.hideNavigationBarLoading();
+          util.showSuccess(res.list.length + '条新内容');
+        }
+      }
     })
-    
-    console.log(resdata.resource1().list);
   },
+
   goTitleDetail(e) {
     wx.navigateTo({
       url: '../../pages/titleDetail/titleDetail?id=' + e.target.dataset.id + '&title=' + e.target.dataset.title
